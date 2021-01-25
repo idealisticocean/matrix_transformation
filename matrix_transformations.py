@@ -29,39 +29,15 @@ def quadrilateral_transformation(a,b,c,d,e,f,g,h,i,j,k,l):
     ax = plt.gca()
     ax.add_patch(p_transformed)
 
-###Coordinates of the original shape    
-##(a,b) = (2,2)
-##(c,d) = (2,4)
-##(e,f) = (4,4)
-##(g,h) = (4,2)
-###Transformation Matrix
-##(i,j) = (1,0)
-##(k,l) = (0,-1) 
-##quadrilateral_transformation(a,b,c,d,e,f,g,h,i,j)
-    
-def triangle_transformation(a,b,c,d,e,f,g,h,i,j):
-    pts = np.array([[a,b],[c,d],[e,f]])
-    p = Polygon(pts, color="orange")
-    ax = plt.gca()
-    ax.add_patch(p)
-    ax.set_xlim(-10,10)
-    ax.set_ylim(-10,10)
-    tm = np.array([[g,h],[i,j]])
-    pts_transformed = (pts.dot(tm))
-    print("The transformed points are: ","\n" , pts_transformed)
-    print("The transformed shape is in green, the original is orange.")
-    p_transformed = Polygon(pts_transformed, color='green')
-    ax = plt.gca()
-    ax.add_patch(p_transformed)
-
-#Coordinates of the original shape    
-(a,b) = (0,0)
-(c,d) = (1,3)
-(e,f) = (0,3)
-#Transformation Matrix
-(g,h) = (0,1)
-(i,j) = (1,0)
-triangle_transformation(a,b,c,d,e,f,g,h,i,j)
+##Coordinates of the original shape    
+#(a,b) = (2,2)
+#(c,d) = (2,4)
+#(e,f) = (4,4)
+#(g,h) = (4,2)
+##Transformation Matrix
+#(i,j) = (1,0)
+#(k,l) = (0,-1) 
+#quadrilateral_transformation(a,b,c,d,e,f,g,h,i,j)
 
 plt.show()
 plt.close()
